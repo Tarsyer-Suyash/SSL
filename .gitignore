@@ -1,0 +1,9 @@
+pyarmor_runtime_000000/
+tarsyer_packages/__pycache__/
+__pycache__/
+__pycache__/
+*.pyc
+*.log
+*.bak_*
+.venv/
+venv*/

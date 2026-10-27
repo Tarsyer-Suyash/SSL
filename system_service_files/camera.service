@@ -1,0 +1,14 @@
+[Unit]
+Description=Counting Camera
+Requires=detector.service
+
+[Service]
+ExecStartPre=/bin/sleep 5
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/celestial/retail_footfall_counting/
+ExecStart=/home/celestial/venv_313/bin/python3 main.py --selected_store_cam "footfall_config"
+
+[Install]
+WantedBy=multi-user.target

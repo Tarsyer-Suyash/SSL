@@ -1,0 +1,13 @@
+[Unit]
+Description=Detector
+
+[Service]
+ExecStartPre=/bin/sleep 5
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/celestial/detector
+ExecStart=/home/celestial/venv_313/bin/python3 ncnn_detector.py --model_path "trent_ncnn_v1.0"
+
+[Install]
+WantedBy=default.target

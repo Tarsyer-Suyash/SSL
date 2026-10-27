@@ -1,0 +1,12 @@
+[Unit]
+Description=Sending footfall data to server
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/celestial/sending_data/
+ExecStart=/usr/bin/python3 sending_retail_data.py
+
+[Install]
+WantedBy=default.target

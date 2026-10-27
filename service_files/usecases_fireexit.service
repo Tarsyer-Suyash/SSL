@@ -1,0 +1,13 @@
+[Unit]
+Description=Usecases - processing fireexit
+
+[Service]
+ExecStartPre=/bin/sleep 5
+Type=simple
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/home/celestial/retail_usecases/
+ExecStart=/home/celestial/venv_313/bin/python3 processing_fireexit.py
+
+[Install]
+WantedBy=default.target
